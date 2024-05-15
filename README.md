@@ -10,7 +10,7 @@ Package license: GPL-2.0-only
 Summary: Python package for coordinate-aware data reading and plotting
 
 xmlplot is a Python package for coordinate-aware reading and plotting
-of data in text and NetCDF format, using xml to store store plot settings
+of data in text and NetCDF format, using xml to store plot settings
 
 
 Current build status
