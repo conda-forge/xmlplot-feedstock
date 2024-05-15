@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/BoldingBruggeman/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 77ebae6f877169723c965095e2053affbf5f383c4e517f194482512462f45376
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xmlplot-{{ version }}.tar.gz
+  sha256: a0b97b804bdfcf93902f3095b02bf57462d9a25eb82da8bf941c7495ec341dd0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -39,7 +39,7 @@ about:
   summary: 'Python package for coordinate-aware data reading and plotting'
   description: |
     xmlplot is a Python package for coordinate-aware reading and plotting
-    of data in text and NetCDF format, using xml to store store plot settings
+    of data in text and NetCDF format, using xml to store plot settings
   license: GPL-2.0-only
   license_family: GPL
   license_file: LICENSE
