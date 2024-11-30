@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/xmlplot-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xmlplot-{{ version }}.tar.gz
   sha256: 8635bb967a18035abd0e186f449ec56f17adfc75159b6e2f4222f29138bde814
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   build:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - matplotlib-base
     - xmlstore >=0.9.13
@@ -31,6 +31,7 @@ test:
     - xmlplot
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
