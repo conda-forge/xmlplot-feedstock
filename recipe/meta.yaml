@@ -24,7 +24,7 @@ requirements:
     - python >={{ python_min }}
     - numpy
     - matplotlib-base
-    - xmlstore >=0.9.15
+    - xmlstore >=0.9.16
 
 test:
   imports:
