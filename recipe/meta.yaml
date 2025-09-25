@@ -1,5 +1,5 @@
 {% set name = "xmlplot" %}
-{% set version = "0.9.31" %}
+{% set version = "0.9.32" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xmlplot-{{ version }}.tar.gz
-  sha256: ad11d47917aeaae77532e72212b3a2bc3c2c249942dd421f851f24b8b17f987f
+  sha256: d224d6426a38dc6d9b12bfd5c059105a4a82d30344587753ed42265ce79e4350
 
 build:
   noarch: python
